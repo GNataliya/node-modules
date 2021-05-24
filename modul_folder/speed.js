@@ -1,6 +1,9 @@
 const os = require('os');
 
-const speedResult = os.cpus().map(arr => arr.speed);
+const speedResult = function (){
+   return os.cpus().map(arr => arr.speed);
+};
+const speedPC = speedResult();
 
 // const speedResult = () => {
 //     const [{ speed }] = os.cpus();
@@ -8,4 +11,4 @@ const speedResult = os.cpus().map(arr => arr.speed);
 // }
 // const speedPC = speedResult();
 
-module.exports.speedMyLaptop = speedResult;
+module.exports.speedMyLaptop = speedPC;
